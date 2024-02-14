@@ -1,0 +1,94 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+}
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Droid+Serif|Playfair+Display|Open+Sans+Condensed:300);
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'EB Garamond';
+    font-size: 32px;
+    line-height: 1.4rem;
+    height: 100%;
+    padding: .5rem;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: auto;
+     -webkit-font-smoothing: antialiased;
+    font-kerning: normal;
+    color: #1A222F;
+    background: #F4FFF3;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+.quote {
+    position: relative;
+    letter-spacing: .03em;
+    margin-bottom: .5rem;
+    
+    &:before {
+        content: "“";
+        position: absolute;
+        left: -.7em;
+    }
+    
+    &:after {
+        content: "”";
+        margin-right: -1rem;
+    }
+}
+
+.quote--container {
+    margin: 4.5rem auto 0;
+    width: 17em;
+    border-bottom: 2px dotted #C6D1BF;
+    padding-bottom: .5rem;
+}
+
+.quote--highlight {
+    color: #D24335;
+    font-size: larger;
+    
+}
+
+.quote--author {
+    font-family:monospace;
+    font-size: .8rem;
+    text-align: right;
+    font-weight: 300;
+}
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 1); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  border: 8px solid #D24335; 
+  border-top: 8px solid #F4FFF3; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
